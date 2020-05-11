@@ -1,12 +1,10 @@
 pipeline {
-    agent { 
-        any
+  agent any
+  stages {
+    stage ('Initialize') {
+      steps {
+        echo 'Placeholder.'
+      }
     }
-    stages {
-        stage('build') {
-            steps {
-                sh 'docker --help'
-            }
-        }
-    }
+  }
 }
