@@ -1,9 +1,12 @@
 pipeline {
-    agent { docker { image "dockerexample" } }
+    agent { 
+        label "master"
+
+    }
     stages {
         stage('build') {
             steps {
-                sh 'docker build dockerexample'
+                sh 'docker --help'
             }
         }
     }
